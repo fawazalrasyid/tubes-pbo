@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "423954222593",
+    "firebase_url": "https://tbs-project-28877.firebaseio.com",
+    "project_id": "tbs-project-28877",
+    "storage_bucket": "tbs-project-28877.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:423954222593:android:6b31717e07ca1f73ef7a00",
+        "android_client_info": {
+          "package_name": "com.fawazalrasyid.tbs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "423954222593-hcgbor79tl01djs39k8nv5r12drrtd2p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJ1esbpQVMYZzHAfz6gEsLVVZLmBwYSDw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "423954222593-hcgbor79tl01djs39k8nv5r12drrtd2p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

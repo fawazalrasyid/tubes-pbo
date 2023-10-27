@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg"
+    tools:context=".LatihanActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/toolbar">
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/back"/>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:gravity="center_vertical"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="10dp"
+            android:textSize="18sp"
+            android:fontFamily="@font/bold"
+            android:textColor="@color/fontdark"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/questiontext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/fontdark"
+                android:textSize="18sp"
+                android:padding="5dp"
+                android:layout_marginBottom="10dp"/>
+
+            <Button
+                android:id="@+id/choiceA"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:gravity="start|center_vertical"
+                android:padding="20dp"
+                style="?android:attr/borderlessButtonStyle"
+                android:background="@drawable/btnanswer"
+                android:fontFamily="@font/regular"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:textColor="@color/fontdark"/>
+
+            <Button
+                android:id="@+id/choiceB"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:gravity="start|center_vertical"
+                android:padding="20dp"
+                style="?android:attr/borderlessButtonStyle"
+                android:background="@drawable/btnanswer"
+                android:fontFamily="@font/regular"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:textColor="@color/fontdark"/>
+
+            <Button
+                android:id="@+id/choiceC"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:gravity="start|center_vertical"
+                android:padding="20dp"
+                style="?android:attr/borderlessButtonStyle"
+                android:background="@drawable/btnanswer"
+                android:fontFamily="@font/regular"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:textColor="@color/fontdark"/>
+
+            <Button
+                android:id="@+id/choiceD"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:gravity="start|center_vertical"
+                android:padding="20dp"
+                style="?android:attr/borderlessButtonStyle"
+                android:background="@drawable/btnanswer"
+                android:fontFamily="@font/regular"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:textColor="@color/fontdark"/>
+
+            <Button
+                android:id="@+id/choiceE"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:gravity="start|center_vertical"
+                android:padding="20dp"
+                style="?android:attr/borderlessButtonStyle"
+                android:background="@drawable/btnanswer"
+                android:fontFamily="@font/regular"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:textColor="@color/fontdark"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

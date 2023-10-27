@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#17C8FF</color>
+    <color name="colorPrimaryDark">#203DD1</color>
+    <color name="colorAccent">#1ABC9C</color>
+    <color name="bg">#FFFFFF</color>
+    <color name="bgcard">#F4F7FA</color>
+    <color name="bgcarddetail">#FFFFFF</color>
+    <color name="fontdark">#000000</color>
+    <color name="font">#FFFFFF</color>
+    <color name="toolbar">#FFFFFF</color>
+    <color name="lineshadow">#4DAEC4EE</color>
+   <color name="btnanswer">#F3F7FA</color>
+</resources>
