@@ -1,10 +1,10 @@
-package com.fawazalrasyid.tbs;
+package com.fawazalrasyid.codelearn;
 
 import android.app.Application;
 
 import com.google.firebase.database.FirebaseDatabase;
 
-public class TobeSmart extends Application {
+public class CodeLearn extends Application {
 
     @Override
     public  void onCreate() {

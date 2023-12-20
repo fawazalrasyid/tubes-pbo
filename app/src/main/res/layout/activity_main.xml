@@ -1,68 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout 
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F4F7FA"
+    android:background="@color/bg"
     tools:context=".MainActivity">
 
-    <ScrollView
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Haloo 👋"
+                android:textSize="16sp"
+                android:textColor="#ACACAC"
+                android:fontFamily="@font/bold"
+                android:layout_marginHorizontal="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fawaz Al Rasyid"
+                android:textSize="18sp"
+                android:textColor="@color/fontdark"
+                android:fontFamily="@font/bold"
+                android:layout_marginHorizontal="16dp"/>
+
+        </LinearLayout>
+
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="150dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Materi terbaik untukmu 🙀"
+                android:textSize="18sp"
+                android:textColor="@color/fontdark"
+                android:fontFamily="@font/bold"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="8dp"/>
 
-                <ImageView
-                    android:id="@+id/bgHome"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:layout_marginTop="0dp"
-                    android:layout_marginBottom="0dp"
-                    android:layout_marginStart="0dp"
-                    android:layout_marginEnd="0dp"/>
-
-            </RelativeLayout>
-
-            <LinearLayout
-                android:orientation="vertical"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_course"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="-15dp"
-                android:layout_marginBottom="0dp"
-                android:background="@drawable/bgshape"
-                android:backgroundTint="@color/bg">
-
-                <GridLayout
-                    android:columnCount="2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginBottom="40dp"
-                    android:layout_marginEnd="15dp">
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/rv_home"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        tools:listitem="@layout/item_menu"/>
-
-                </GridLayout>
-
-            </LinearLayout>
+                tools:listitem="@layout/item_course"
+                android:layout_marginHorizontal="8dp"/>
 
         </LinearLayout>
-        
-    </ScrollView>
 
-</RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

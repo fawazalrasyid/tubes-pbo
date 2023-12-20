@@ -13,24 +13,30 @@
         android:layout_height="?android:attr/actionBarSize"
         android:background="@color/toolbar">
 
-        <Button
-            android:id="@+id/back"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:gravity="center_vertical"
-            android:background="@drawable/back"/>
-
-        <TextView
-            android:id="@+id/name"
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:maxLines="1"
-            android:gravity="center_vertical"
-            android:layout_marginStart="25dp"
-            android:layout_marginEnd="10dp"
-            android:textSize="18sp"
-            android:fontFamily="@font/bold"
-            android:textColor="@color/fontdark"/>
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/back"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/baseline_arrow_back_24"/>
+
+            <TextView
+                android:id="@+id/quiz_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:gravity="center_vertical"
+                android:layout_marginHorizontal="16dp"
+                android:textSize="18sp"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/fontdark"/>
+
+        </LinearLayout>
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -44,7 +50,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/questiontext"
+                android:id="@+id/question"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -109,23 +115,6 @@
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"
-                android:gravity="start|center_vertical"
-                android:padding="20dp"
-                style="?android:attr/borderlessButtonStyle"
-                android:background="@drawable/btnanswer"
-                android:fontFamily="@font/regular"
-                android:textSize="16sp"
-                android:textAllCaps="false"
-                android:textColor="@color/fontdark"/>
-
-            <Button
-                android:id="@+id/choiceE"
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"
                 android:gravity="start|center_vertical"

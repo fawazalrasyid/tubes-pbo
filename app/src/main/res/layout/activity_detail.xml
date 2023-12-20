@@ -14,7 +14,8 @@
         android:layout_height="25dp"
         android:layout_margin="15dp"
         android:gravity="center_vertical"
-        android:background="@drawable/back"/>
+        android:background="@drawable/baseline_arrow_back_24"
+        android:backgroundTint="@color/font"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -39,6 +40,18 @@
                     android:layout_marginStart="0dp"
                     android:layout_marginEnd="0dp"/>
 
+                <TextView
+                    android:id="@+id/course_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:maxLines="2"
+                    android:gravity="center_vertical"
+                    android:layout_marginHorizontal="16dp"
+                    android:textSize="24sp"
+                    android:fontFamily="@font/bold"
+                    android:textColor="@color/font"/>
+
             </RelativeLayout>
 
             <LinearLayout
@@ -47,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="-15dp"
                 android:layout_marginBottom="10dp"
-                android:background="@drawable/bgshape"
+                android:background="@drawable/bg_shape"
                 android:backgroundTint="@color/bg">
 
                 <GridLayout
@@ -59,37 +72,12 @@
                     android:layout_marginEnd="5dp">
 
                     <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/rv_detail"
+                        android:id="@+id/rv_module"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        tools:listitem="@layout/item_menu_detail"/>
+                        tools:listitem="@layout/item_module"/>
 
                 </GridLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="10dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp">
-
-                <Button
-                    android:id="@+id/latihan"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_gravity="end"
-                    android:layout_marginStart="10dp"
-                    android:text="Tes Akhir"
-                    android:fontFamily="@font/bold"
-                    android:textColor="@color/font"
-                    android:textAllCaps="false"
-                    android:background="@drawable/btnshape"
-                    android:backgroundTint="@color/colorPrimaryDark" />
 
             </LinearLayout>
 

@@ -7,14 +7,14 @@
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/itemmenudetail"
+        android:id="@+id/item_module"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_columnWeight="1"
         android:layout_rowWeight="1"
         app:cardCornerRadius="15dp"
         app:cardElevation="0dp"
-        android:background="@color/bgcarddetail">
+        android:background="@color/bgcard">
 
         <RelativeLayout
             android:layout_width="match_parent"

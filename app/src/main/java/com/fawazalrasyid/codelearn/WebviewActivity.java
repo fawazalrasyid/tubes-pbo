@@ -1,10 +1,9 @@
-package com.fawazalrasyid.tbs;
+package com.fawazalrasyid.codelearn;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;

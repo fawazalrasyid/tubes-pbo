@@ -4,7 +4,7 @@ apply plugin: 'com.google.gms.google-services'
 android {
     compileSdkVersion 33
     defaultConfig {
-        applicationId "com.fawazalrasyid.tbs"
+        applicationId "com.fawazalrasyid.codelearn"
         minSdkVersion 21
         targetSdkVersion 33
         versionCode 1
@@ -18,7 +18,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    namespace 'com.fawazalrasyid.tbs'
+    namespace 'com.fawazalrasyid.codelearn'
 }
 
 dependencies {
@@ -26,6 +26,9 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'com.google.firebase:firebase-database:20.3.0'
     implementation 'com.firebaseui:firebase-ui-database:4.3.2'
+    implementation platform('com.google.firebase:firebase-bom:32.7.0')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.android.material:material:1.8.0'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
