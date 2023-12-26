@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.Html;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -16,7 +17,7 @@ import android.widget.Toast;
 
 import com.fawazalrasyid.codelearn.Models.Database;
 import com.fawazalrasyid.codelearn.Models.MCQuestion;
-import com.fawazalrasyid.codelearn.Models.Quiz;
+import com.fawazalrasyid.codelearn.Models.PostTest;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -24,15 +25,10 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
-public class LatihanActivity extends AppCompatActivity {
+public class PostTestActivity extends AppCompatActivity {
 
     private TextView tvQuestion;
-    private Button choiceA;
-    private Button choiceB;
-    private Button choiceC;
-    private Button choiceD;
-    private Button choiceE;
-
+    private Button choiceA, choiceB, choiceC, choiceD;
     DatabaseReference quizRef, questionRef;
     Query quiz, question;
     ProgressDialog progressDialog;
@@ -48,7 +44,7 @@ public class LatihanActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        setContentView(R.layout.activity_latihan);
+        setContentView(R.layout.activity_post_test);
 
         Intent intent = getIntent();
         courseId = intent.getStringExtra("courseId");
@@ -68,7 +64,7 @@ public class LatihanActivity extends AppCompatActivity {
         choiceC = (Button) findViewById(R.id.choiceC);
         choiceD = (Button) findViewById(R.id.choiceD);
 
-        progressDialog = ProgressDialog.show(LatihanActivity.this,
+        progressDialog = ProgressDialog.show(PostTestActivity.this,
                 null,
                 "Memuat...",
                 true,
@@ -80,11 +76,11 @@ public class LatihanActivity extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
-                final Quiz quiz = dataSnapshot.getValue(Quiz.class);
+                final PostTest postTest = dataSnapshot.getValue(PostTest.class);
 
                 TextView tvName = (TextView) findViewById(R.id.quiz_name);
-                tvName.setText(quiz.getName());
-                totalQuestion = quiz.getTotalQuestion();
+                tvName.setText(postTest.getName());
+                totalQuestion = postTest.getTotalQuestion();
             }
 
             @Override
@@ -105,7 +101,7 @@ public class LatihanActivity extends AppCompatActivity {
         questionIndex++;
 
         if (questionIndex > totalQuestion) {
-            Intent i = new Intent(LatihanActivity.this, ScoreActivity.class);
+            Intent i = new Intent(PostTestActivity.this, ScoreActivity.class);
             totalScore = 100 / totalQuestion * correctCount;
             i.putExtra("score", totalScore);
             startActivity(i);
@@ -119,7 +115,7 @@ public class LatihanActivity extends AppCompatActivity {
 
                     final MCQuestion question = dataSnapshot.getValue(MCQuestion.class);
 
-                    tvQuestion.setText(question.getQuestion());
+                    tvQuestion.setText(Html.fromHtml(question.getQuestion()));
                     choiceA.setText(question.getA());
                     choiceB.setText(question.getB());
                     choiceC.setText(question.getC());
@@ -169,12 +165,12 @@ public class LatihanActivity extends AppCompatActivity {
     }
 
     public void checkAnswer(MCQuestion question, Button selectedChoice) {
-        if (selectedChoice.getText().toString().equals(question.getCorrectAnswer())) {
+        if (question.isCorrectAnswer(selectedChoice.getText().toString())) {
             correctCount++;
-            Toast.makeText(LatihanActivity.this, "Jawaban Benar", Toast.LENGTH_SHORT).show();
+            Toast.makeText(PostTestActivity.this, "Jawaban Benar", Toast.LENGTH_SHORT).show();
             selectedChoice.setBackgroundDrawable(ContextCompat.getDrawable(getBaseContext(), R.drawable.btncorrect));
         } else {
-            Toast.makeText(LatihanActivity.this, "Jawaban Salah", Toast.LENGTH_SHORT).show();
+            Toast.makeText(PostTestActivity.this, "Jawaban Salah", Toast.LENGTH_SHORT).show();
             selectedChoice.setBackgroundDrawable(ContextCompat.getDrawable(getBaseContext(), R.drawable.btnwrong));
         }
 
@@ -184,7 +180,7 @@ public class LatihanActivity extends AppCompatActivity {
             public void run() {
                 updateQuestions();
             }
-        }, 2000);
+        }, 500);
     }
 
     public void onBackPressed() {

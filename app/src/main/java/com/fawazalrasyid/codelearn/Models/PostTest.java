@@ -1,10 +1,10 @@
 package com.fawazalrasyid.codelearn.Models;
 
-public class Quiz {
+public class PostTest {
     private String name;
     private int totalQuestion;
 
-    Quiz() {}
+    PostTest() {}
 
     public String getName() {
         return name;

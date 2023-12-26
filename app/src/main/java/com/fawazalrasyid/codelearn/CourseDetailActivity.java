@@ -16,7 +16,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.fawazalrasyid.codelearn.Adapter.ModuleAdapter;
-import com.fawazalrasyid.codelearn.Models.Course;
 import com.fawazalrasyid.codelearn.Models.Database;
 import com.fawazalrasyid.codelearn.Models.Module;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -26,7 +25,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.squareup.picasso.Picasso;
 
-public class DetailActivity extends AppCompatActivity {
+public class CourseDetailActivity extends AppCompatActivity {
 
     DatabaseReference moduleRef;
     Query modules;
@@ -39,7 +38,7 @@ public class DetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        setContentView(R.layout.activity_detail);
+        setContentView(R.layout.activity_detail_course);
 
         Intent intent = getIntent();
         courseId = intent.getStringExtra("courseId");
@@ -66,7 +65,7 @@ public class DetailActivity extends AppCompatActivity {
         modules = new Database().query(moduleRef);
 
         moduleRecycler = findViewById(R.id.rv_module);
-        GridLayoutManager gridLayout= new GridLayoutManager(DetailActivity.this, 1 );
+        GridLayoutManager gridLayout= new GridLayoutManager(CourseDetailActivity.this, 1 );
         moduleRecycler.setLayoutManager(gridLayout);
 
         FirebaseRecyclerOptions options = new FirebaseRecyclerOptions.Builder<Module>()
@@ -87,7 +86,7 @@ public class DetailActivity extends AppCompatActivity {
                 holder.bindToCard(model, new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(DetailActivity.this, MateriActivity.class);
+                        Intent intent = new Intent(CourseDetailActivity.this, ModuleActivity.class);
                         intent.putExtra("courseId", courseId);
                         intent.putExtra("moduleId", model.getId());
                         intent.putExtra("moduleName", model.getName());

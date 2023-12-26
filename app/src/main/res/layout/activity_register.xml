@@ -6,17 +6,17 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@android:color/white"
-    tools:context=".LoginActivity">
+    tools:context=".RegisterActivity">
 
     <TextView
-        android:id="@+id/quiz_name"
+        android:id="@+id/register_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:maxLines="1"
         android:gravity="center_vertical"
         android:layout_marginTop="48dp"
         android:layout_marginHorizontal="16dp"
-        android:text="Login"
+        android:text="Register"
         android:textSize="24sp"
         android:fontFamily="@font/bold"
         android:textColor="@color/fontdark"/>
@@ -28,6 +28,30 @@
         android:gravity="center_vertical"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="48dp"
+        android:text="Nama"
+        android:textSize="18sp"
+        android:fontFamily="@font/bold"
+        android:textColor="@color/fontdark"/>
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:hint="Masukkan nama"
+        android:minHeight="48dp"
+        android:fontFamily="@font/regular"
+        android:textColor="@color/fontdark"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:gravity="center_vertical"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="24dp"
         android:text="Email"
         android:textSize="18sp"
         android:fontFamily="@font/bold"
@@ -40,6 +64,7 @@
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="8dp"
         android:hint="Masukkan email"
+        android:inputType="textEmailAddress"
         android:minHeight="48dp"
         android:fontFamily="@font/regular"
         android:textColor="@color/fontdark"
@@ -70,20 +95,45 @@
         android:textColor="@color/fontdark"
         android:textSize="16sp" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:gravity="center_vertical"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Konfirmasi Password"
+        android:textSize="18sp"
+        android:fontFamily="@font/bold"
+        android:textColor="@color/fontdark"/>
+
+    <EditText
+        android:id="@+id/et_confirm_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:hint="Konfirmasi password"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:fontFamily="@font/regular"
+        android:textColor="@color/fontdark"
+        android:textSize="16sp" />
+
     <Button
-        android:id="@+id/btn_login"
+        android:id="@+id/btn_register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
         android:layout_marginHorizontal="16dp"
-        android:text="Login"
-        android:fontFamily="@font/bold"
-        android:textColor="@android:color/white"
+        android:text="Register"
+        android:textColor="@color/font"
         android:textSize="18sp"
         android:textAllCaps="false"
+        android:fontFamily="@font/bold"
         android:background="@drawable/btnshape"
         android:backgroundTint="@color/colorPrimaryDark"
-        tools:ignore="ButtonStyle"/>
+        tools:ignore="ButtonStyle" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -96,21 +146,22 @@
             android:id="@+id/have_account_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Belum punya akun? "
-            android:fontFamily="@font/regular"
+            android:text="Sudah punya akun? "
             android:textColor="@color/fontdark"
+            android:fontFamily="@font/regular"
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/btn_register"
+            android:id="@+id/btn_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Register"
+            android:text="Login"
             android:textSize="16sp"
             android:textColor="@color/colorAccent"
             android:fontFamily="@font/bold"
             android:clickable="true"
-            android:onClick="redirectToRegister" />
+            android:onClick="redirectToLogin" />
     </LinearLayout>
+
 
 </LinearLayout>

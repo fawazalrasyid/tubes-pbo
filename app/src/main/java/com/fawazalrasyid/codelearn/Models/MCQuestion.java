@@ -1,17 +1,9 @@
 package com.fawazalrasyid.codelearn.Models;
 
-public class MCQuestion {
-    private String question, a, b, c, d, correctAnswer;
+public class MCQuestion extends Question implements CheckAnswer {
+    private String a, b, c, d, correctAnswer;
 
     public MCQuestion() {}
-
-    public String getQuestion() {
-        return question;
-    }
-
-    public void setQuestion(String question) {
-        this.question = question;
-    }
 
     public String getA() {
         return a;
@@ -51,5 +43,15 @@ public class MCQuestion {
 
     public void setCorrectAnswer(String correctAnswer) {
         this.correctAnswer = correctAnswer;
+    }
+
+
+    @Override
+    public boolean isCorrectAnswer(String answer) {
+        if (answer.equals(getCorrectAnswer())) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

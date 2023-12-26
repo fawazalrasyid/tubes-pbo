@@ -35,7 +35,6 @@ public class ScoreActivity extends AppCompatActivity {
 
         });
 
-
         TextView valueScore = (TextView)findViewById(R.id.valueScore);
         Spannable text = new SpannableString("Nilai kamu");
         Spannable value = new SpannableString(" " + Score);
@@ -45,23 +44,6 @@ public class ScoreActivity extends AppCompatActivity {
 
         value.setSpan(new ForegroundColorSpan(Color.parseColor("#1ABC9C")), 0, value.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         valueScore.append(value);
-
-        updatetextScore();
-    }
-
-    private void updatetextScore() {
-        if (Score >= 85) {
-            TextView txt = (TextView) findViewById(R.id.textScore);
-            txt.setText("Awal yang bagus, pertahankan!");
-        }
-        else if (Score >= 65) {
-            TextView txt = (TextView) findViewById(R.id.textScore);
-            txt.setText("Awal yang bagus, tingkatkan terus prestasimu!");
-        }
-        else {
-            TextView txt = (TextView) findViewById(R.id.textScore);
-            txt.setText("Ayo belajar lebih giat lagi");
-        }
     }
 
     public void onBackPressed() {

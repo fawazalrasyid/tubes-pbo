@@ -17,14 +17,17 @@
         tools:ignore="AllowBackup,GoogleAppIndexingWarning"
         tools:targetApi="m">
         <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
             android:exported="false" />
         <activity android:name=".WebviewActivity" />
         <activity android:name=".PustakaActivity" />
         <activity android:name=".ScoreActivity" />
-        <activity android:name=".LatihanActivity" />
-        <activity android:name=".MateriActivity" />
-        <activity android:name=".DetailActivity" />
+        <activity android:name=".PostTestActivity" />
+        <activity android:name=".ModuleActivity" />
+        <activity android:name=".CourseDetailActivity" />
         <activity android:name=".InfoActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".StartActivity" />

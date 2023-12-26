@@ -11,10 +11,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.fawazalrasyid.codelearn.Adapter.ModuleAdapter;
 import com.fawazalrasyid.codelearn.Models.Database;
 import com.fawazalrasyid.codelearn.Models.Module;
-import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -22,7 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
-public class MateriActivity extends AppCompatActivity {
+public class ModuleActivity extends AppCompatActivity {
 
     ProgressDialog progressDialog;
     DatabaseReference moduleRef;
@@ -32,7 +30,7 @@ public class MateriActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_materi);
+        setContentView(R.layout.activity_module);
 
         Intent intent = getIntent();
         courseId = intent.getStringExtra("courseId");
@@ -65,7 +63,7 @@ public class MateriActivity extends AppCompatActivity {
                 btnQuiz.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent i = new Intent(MateriActivity.this, LatihanActivity.class);
+                        Intent i = new Intent(ModuleActivity.this, PostTestActivity.class);
                         i.putExtra("moduleId", moduleId);
                         i.putExtra("courseId", courseId);
                         startActivity(i);

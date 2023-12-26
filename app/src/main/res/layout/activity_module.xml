@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/bg"
-    tools:context=".MateriActivity">
+    tools:context=".ModuleActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
@@ -87,7 +87,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:text="Quiz"
+                    android:text="Post Test"
                     android:fontFamily="@font/bold"
                     android:textColor="@color/font"
                     android:textAllCaps="false"

@@ -14,29 +14,45 @@
         android:layout_height="wrap_content">
 
         <LinearLayout
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp">
+            android:layout_height="wrap_content">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Haloo 👋"
-                android:textSize="16sp"
-                android:textColor="#ACACAC"
-                android:fontFamily="@font/bold"
-                android:layout_marginHorizontal="16dp"/>
+                android:layout_weight="1"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Fawaz Al Rasyid"
-                android:textSize="18sp"
-                android:textColor="@color/fontdark"
-                android:fontFamily="@font/bold"
-                android:layout_marginHorizontal="16dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Haloo 👋"
+                    android:textSize="16sp"
+                    android:textColor="#ACACAC"
+                    android:fontFamily="@font/bold"
+                    android:layout_marginHorizontal="16dp"/>
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="@color/fontdark"
+                    android:fontFamily="@font/bold"
+                    android:layout_marginHorizontal="16dp"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_logout"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/baseline_logout_24" />
 
         </LinearLayout>
 
