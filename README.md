@@ -8,9 +8,7 @@ Tujuan utama CodeLearn adalah memberikan pengalaman pembelajaran yang interaktif
 ## Fitur Utama
 
 - Materi Pembelajaran
-- Progress Pembelajaran
-- Quiz dan tes akhir
-- Sertifikat
+- Quiz Post Test
 
 ## Color Reference
 
