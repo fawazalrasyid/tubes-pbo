@@ -6,7 +6,6 @@ public class Module {
     private String name;
     private String image;
     private String content;
-    private String urlVideo;
 
     Module() {}
 
@@ -40,13 +39,5 @@ public class Module {
 
     public void setContent(String content) {
         this.content = content;
-    }
-
-    public String getUrlVideo() {
-        return urlVideo;
-    }
-
-    public void setUrlVideo(String urlVideo) {
-        this.urlVideo = urlVideo;
     }
 }

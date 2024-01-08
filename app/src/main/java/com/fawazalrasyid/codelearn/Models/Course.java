@@ -6,10 +6,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Course {
-    public String id;
-    public String name;
-    public String image;
-    public String backgroundImage;
+    private String id;
+    private String name;
+    private String descriptions;
+    private Module module[];
+    private String image;
+    private String backgroundImage;
 
     public Course() {}
 
@@ -27,6 +29,14 @@ public class Course {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getDescriptions() {
+        return descriptions;
+    }
+
+    public void setDescriptions(String descriptions) {
+        this.descriptions = descriptions;
     }
 
     public String getImage() {
